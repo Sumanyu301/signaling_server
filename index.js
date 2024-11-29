@@ -8,7 +8,7 @@ const mappings = {};
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("running this signaling server babe");
+  res.send("running this signaling server");
 });
 
 app.post("/ip", (req, res) => {
