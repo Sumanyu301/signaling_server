@@ -13,11 +13,13 @@ app.get("/", (req, res) => {
 
 app.post("/ip", (req, res) => {
   const body = req.body;
-  const { ip, code, port } = body;
-  console.log(`Received /ip request with ip: ${ip}, code: ${code}, port: ${port}`);
+  const { publicIP, code, port, localIP } = body;
+  console.log(
+    `Received /ip request with ip: ${ip}, code: ${code}, port: ${port}`
+  );
 
   // Store the mapping
-  mappings[code] = { ip, port };
+  mappings[code] = { localIP, port, publicIP };
 
   // Log the current state of mappings
   console.log("Current mappings:", mappings);
