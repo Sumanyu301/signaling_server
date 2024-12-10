@@ -15,7 +15,7 @@ app.post("/ip", (req, res) => {
   const body = req.body;
   const { publicIP, code, port, localIP } = body;
   console.log(
-    `Received /ip request with ip: ${ip}, code: ${code}, port: ${port}`
+    `Received /ip request with ip: ${localIP}, code: ${code}, port: ${port}`
   );
 
   // Store the mapping
